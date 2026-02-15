@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "321253167036",
+    "project_id": "car-shine-68e43",
+    "storage_bucket": "car-shine-68e43.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:321253167036:android:c6e24a59615ad5251965b9",
+        "android_client_info": {
+          "package_name": "com.example.car_wash_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "321253167036-lbhsf8eq4cbfrs4l8e05kkahtua5hddk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFaP1W4Px9l5RTP8xHtZfeh_dSVHmBKDE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "321253167036-lbhsf8eq4cbfrs4l8e05kkahtua5hddk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:321253167036:android:85cea418964af6a81965b9",
+        "android_client_info": {
+          "package_name": "com.raghad.carwash"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "321253167036-daropv48u8qh3tkcbea8ise9k055oi5k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.raghad.carwash",
+            "certificate_hash": "05e9d734d8bcf35c1daf7ad8cd5181ec6e9a45f4"
+          }
+        },
+        {
+          "client_id": "321253167036-lbhsf8eq4cbfrs4l8e05kkahtua5hddk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFaP1W4Px9l5RTP8xHtZfeh_dSVHmBKDE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "321253167036-lbhsf8eq4cbfrs4l8e05kkahtua5hddk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App name -->
+    <string name="app_name">Car Wash</string>
+
+    <!-- Google Maps API Key (RESTRICTED IN GOOGLE CLOUD CONSOLE) -->
+    <string name="google_maps_api_key">AIzaSyDzdD60difiTmfhjOOzSA0ZUK7rDHXLsKA</string>
+
+</resources>

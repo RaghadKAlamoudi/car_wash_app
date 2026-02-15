@@ -1,0 +1,180 @@
+{
+  "app_name": "كار شاين",
+
+  "signup": "إنشاء حساب",
+  "login": "تسجيل الدخول",
+  "logout": "تسجيل الخروج",
+  "create_account": "إنشاء حساب",
+
+  "welcome_back": "مرحباً بعودتك",
+  "login_subtitle": "سجّل الدخول للحفاظ على لمعان سيارتك هذا الموسم.",
+  "signup_subtitle": "انضم إلى مجتمع كار شاين اليوم.",
+
+  "full_name": "الاسم الكامل",
+  "email": "البريد الإلكتروني",
+  "password": "كلمة المرور",
+  "new_password": "كلمة مرور جديدة",
+
+  "fill_all_fields": "يرجى تعبئة جميع الحقول",
+  "enter_email_password": "يرجى إدخال البريد الإلكتروني وكلمة المرور",
+  "signup_failed": "فشل إنشاء الحساب",
+  "login_failed": "فشل تسجيل الدخول",
+  "user_not_found": "لا يوجد حساب بهذا البريد الإلكتروني",
+  "wrong_password": "كلمة المرور غير صحيحة",
+  "something_wrong": "حدث خطأ ما، يرجى المحاولة مرة أخرى",
+
+  "forgot_password": "نسيت كلمة المرور؟",
+  "already_have_account": "لديك حساب بالفعل؟",
+  "dont_have_account": "ليس لديك حساب؟",
+
+  "terms_text": "بإنشائك حساباً، فإنك توافق على شروط الخدمة وسياسة الخصوصية.",
+
+  "get_started": "ابدأ الآن",
+  "language": "اللغة",
+  "english": "English",
+  "arabic": "العربية",
+
+  "home": "الرئيسية",
+  "hello": "مرحباً",
+  "take_care": "دعنا نعتني بسيارتك",
+
+  "new_wash": "غسيل جديد",
+  "add_new_wash": "إضافة غسيل جديد",
+
+  "about_us": "من نحن",
+  "why_choose_us": "لماذا نحن",
+  "special_offer": "عرض خاص",
+  "first_wash_discount": "احصل على خصم يصل إلى 20٪ على أول غسيل",
+
+  "at_your_location": "نصل إلى موقعك",
+  "at_your_location_desc": "نقدم الخدمة في موقعك سواء في المنزل أو العمل.",
+
+  "flexible_scheduling": "مواعيد مرنة",
+  "flexible_scheduling_desc": "اختر الوقت الذي يناسب جدولك.",
+
+  "trusted_professionals": "فريق موثوق",
+  "trusted_professionals_desc": "فرق ذات خبرة يمكنك الاعتماد عليها.",
+
+  "premium_quality": "خدمة بجودة عالية",
+  "premium_quality_desc": "منتجات عالية الجودة وتفاصيل دقيقة.",
+
+  "select_one_or_more_services": "يمكنك اختيار خدمة واحدة أو أكثر",
+
+  "services": "خدمات غسيل السيارات",
+  "available_services": "الخدمات المتاحة",
+
+  "basic_wash": "غسيل أساسي",
+  "full_wash": "غسيل كامل",
+  "deep_wash": "غسيل عميق",
+
+  "upcoming_wash": "الغسيل القادم",
+  "no_upcoming": "لا يوجد غسيل قادم",
+
+  "past_washes": "الغسلات السابقة",
+  "no_past": "لا يوجد غسيل سابق",
+
+  "my_bookings": "حجوزاتي",
+  "no_bookings": "لا توجد حجوزات بعد",
+  "wash": "غسيل",
+
+  "upcoming": "قادم",
+  "completed": "مكتملة",
+  "canceled": "ملغاة",
+
+  "reschedule": "إعادة جدولة",
+  "cancel": "إلغاء",
+
+  "confirm_cancel": "هل أنت متأكد من رغبتك في إلغاء هذا الغسيل؟",
+  "yes_cancel": "نعم، إلغاء",
+  "no": "لا",
+  "ok": "حسناً",
+
+  "date_time": "التاريخ والوقت",
+  "select_date": "اختر التاريخ",
+  "select_time": "اختر الوقت",
+  "continue": "متابعة",
+  "next": "التالي",
+
+  "sar": "ريال",
+
+  "select_car_type": "اختر نوع السيارة",
+  "sedan": "سيدان",
+  "suv": "دفع رباعي",
+  "truck": "شاحنة",
+
+  "car_details": "تفاصيل السيارة",
+  "select_car_brand": "اختر ماركة السيارة",
+  "select_car_model": "اختر موديل السيارة",
+  "car_year": "سنة الصنع (مثال: 2022)",
+
+  "plate": "لوحة المركبة",
+  "plate_example": "ABC 1234 | أ ب ج ١٢٣٤",
+  "plate_helper": "صيغة لوحة المركبة السعودية",
+  "invalid_plate": "صيغة لوحة المركبة غير صحيحة\nمثال:\nABC 1234 | أ ب ج ١٢٣٤",
+
+  "select_location": "اختر الموقع",
+  "tap_map": "اضغط على الخريطة لاختيار الموقع",
+  "enable_location": "يرجى تفعيل خدمات الموقع",
+  "location_denied": "تم رفض إذن الموقع",
+  "location_failed": "فشل الحصول على الموقع",
+  "service_unavailable": "عذراً، خدمتنا غير متوفرة في منطقتك حالياً",
+
+  "payment": "الدفع",
+  "credit_card": "بطاقة ائتمان / مدى",
+  "apple_pay": "آبل باي",
+  "pay_on_site": "الدفع عند الموقع",
+
+  "profile": "الملف الشخصي",
+  "personal_information": "المعلومات الشخصية",
+  "name": "الاسم",
+  "address": "العنوان",
+  "payment_method": "طريقة الدفع",
+  "save": "حفظ",
+
+  "account": "الحساب",
+  "change_email": "تغيير البريد الإلكتروني",
+  "change_password": "تغيير كلمة المرور",
+
+  "my_vehicles": "مركباتي",
+  "add_vehicle": "إضافة مركبة",
+  "no_vehicles": "لا توجد مركبات مضافة حالياً",
+
+  "edit_vehicle": "تعديل المركبة",
+  "delete_vehicle": "حذف المركبة",
+  "delete_vehicle_confirm": "هل أنت متأكد من رغبتك في حذف هذه المركبة؟",
+
+  "cannot_delete_vehicle": "لا يمكن حذف المركبة",
+  "must_have_at_least_one_vehicle": "يجب أن يكون لديك مركبة واحدة على الأقل لاستخدام التطبيق.",
+
+  "confirm_and_pay": "تأكيد والدفع",
+
+  "landing_title": "امنح سيارتك مظهراً جديداً",
+  "landing_subtitle": "استمتع بقوة الرغوة المثالية مع أفخم غسيل سيارات. عروض خريفية خاصة متوفرة الآن!",
+
+  "or": "أو",
+  "login_with_google": "تسجيل الدخول باستخدام Google",
+  "login_with_apple": "تسجيل الدخول باستخدام Apple",
+  "signup_with_google": "إنشاء حساب باستخدام Google",
+  "signup_with_apple": "إنشاء حساب باستخدام Apple",
+
+  "settings": "الإعدادات",
+  "preferences": "التفضيلات",
+  "account_management": "إدارة الحساب",
+  "support_legal": "الدعم والشروط",
+
+  "push_notifications": "الإشعارات",
+  "marketing_emails": "الرسائل التسويقية",
+
+  "help_center": "مركز المساعدة",
+  "terms_of_service": "شروط الخدمة",
+  "privacy_policy": "سياسة الخصوصية",
+
+  "delete_account": "حذف الحساب",
+
+  "promo_codes": "رموز الخصم",
+  "copy_code": "نسخ الرمز",
+  "code_copied": "تم نسخ رمز الخصم",
+  "expires": "ينتهي في",
+  "no_expiry": "بدون تاريخ انتهاء",
+  "expired": "منتهي"
+}

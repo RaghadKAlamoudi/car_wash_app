@@ -1,0 +1,4 @@
+enum CarFlowMode {
+  booking,
+  vehicleOnly,
+}
