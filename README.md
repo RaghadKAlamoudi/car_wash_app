@@ -1,3 +1,13 @@
-# car_wash_app
+# Car Wash App
 
-A new Flutter project.
+Flutter application for booking car wash services.
+
+Features:
+- Service selection
+- Booking system
+- Admin dashboard
+- Firebase Firestore backend
+
+Developed using:
+- Flutter
+- Firebase
