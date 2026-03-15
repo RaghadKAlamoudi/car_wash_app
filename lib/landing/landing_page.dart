@@ -35,6 +35,7 @@ class LandingPage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Stack(
         children: [
+
           // ================= HERO IMAGE =================
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.55,
@@ -42,6 +43,7 @@ class LandingPage extends StatelessWidget {
             child: Stack(
               fit: StackFit.expand,
               children: [
+
                 Image.asset(
                   'assets/images/onboarding_car.jpg',
                   fit: BoxFit.cover,
@@ -119,6 +121,8 @@ class LandingPage extends StatelessWidget {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
+
+                    // Title
                     Text(
                       t.translate('landing_title'),
                       textAlign: TextAlign.center,
@@ -128,7 +132,10 @@ class LandingPage extends StatelessWidget {
                         color: Theme.of(context).primaryColor,
                       ),
                     ),
+
                     const SizedBox(height: 16),
+
+                    // Subtitle
                     Text(
                       t.translate('landing_subtitle'),
                       textAlign: TextAlign.center,
@@ -137,15 +144,27 @@ class LandingPage extends StatelessWidget {
                           .bodyMedium
                           ?.copyWith(color: Colors.grey),
                     ),
-                    const SizedBox(height: 28),
+
+                    const SizedBox(height: 32),
+
+                    // ================= START BUTTON =================
                     GestureDetector(
                       onTap: () => _getStarted(context),
                       child: Container(
-                        width: 56,
-                        height: 56,
+                        width: 60,
+                        height: 60,
                         decoration: BoxDecoration(
                           color: Theme.of(context).primaryColor,
                           shape: BoxShape.circle,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Theme.of(context)
+                                  .primaryColor
+                                  .withOpacity(0.4),
+                              blurRadius: 10,
+                              offset: const Offset(0, 5),
+                            )
+                          ],
                         ),
                         child: const Icon(
                           Icons.arrow_forward,
@@ -153,6 +172,50 @@ class LandingPage extends StatelessWidget {
                           size: 28,
                         ),
                       ),
+                    ),
+
+                    const SizedBox(height: 36),
+
+                    // ================= DIVIDER =================
+                    Divider(
+                      color: Colors.grey.shade300,
+                      thickness: 1,
+                    ),
+
+                    const SizedBox(height: 16),
+
+                    // ================= POWERED BY =================
+                    Column(
+                      children: [
+
+                        const Text(
+                          "Powered by",
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Colors.grey,
+                            letterSpacing: 1,
+                          ),
+                        ),
+
+                        const SizedBox(height: 8),
+
+                        // Company Logo
+                        Image.asset(
+                          "assets/images/image.png",
+                          height: 28,
+                        ),
+
+                        const SizedBox(height: 6),
+
+                        const Text(
+                          "Red Sand Technology",
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.black87,
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
@@ -165,6 +228,7 @@ class LandingPage extends StatelessWidget {
   }
 }
 
+
 // ================= SMOOTH CURVE CLIPPER =================
 
 class SmoothTopCurveClipper extends CustomClipper<Path> {
@@ -175,10 +239,8 @@ class SmoothTopCurveClipper extends CustomClipper<Path> {
 
     final path = Path();
 
-    // Start left
     path.moveTo(0, cornerRadius);
 
-    // Top-left rounded corner
     path.quadraticBezierTo(
       0,
       0,
@@ -186,10 +248,8 @@ class SmoothTopCurveClipper extends CustomClipper<Path> {
       0,
     );
 
-    // Line to before center curve
     path.lineTo(size.width / 2 - 120, 0);
 
-    // Center smooth inward curve
     path.cubicTo(
       size.width / 2 - 60,
       0,
@@ -208,10 +268,8 @@ class SmoothTopCurveClipper extends CustomClipper<Path> {
       0,
     );
 
-    // Line to top-right corner
     path.lineTo(size.width - cornerRadius, 0);
 
-    // Top-right rounded corner
     path.quadraticBezierTo(
       size.width,
       0,
@@ -219,7 +277,6 @@ class SmoothTopCurveClipper extends CustomClipper<Path> {
       cornerRadius,
     );
 
-    // Rest of container
     path.lineTo(size.width, size.height);
     path.lineTo(0, size.height);
     path.close();
