@@ -197,15 +197,17 @@ class LandingPage extends StatelessWidget {
                           ),
                         ),
 
-                        const SizedBox(height: 8),
+                        const SizedBox(height: 12),
 
-                        // Company Logo
-                        Image.asset(
-                          "assets/images/image.png",
-                          height: 28,
+                        SizedBox(
+                          height: 120,
+                          child: Image.asset(
+                            "assets/images/image.png",
+                            fit: BoxFit.contain,
+                          ),
                         ),
 
-                        const SizedBox(height: 6),
+                        const SizedBox(height: 10),
 
                         const Text(
                           "Red Sand Technology",
