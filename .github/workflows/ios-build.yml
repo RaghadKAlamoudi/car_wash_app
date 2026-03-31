@@ -19,8 +19,19 @@ jobs:
           channel: stable
           flutter-version: 3.22.0
 
+      - name: Verify Flutter
+        run: flutter --version
+
       - name: Install dependencies
         run: flutter pub get
+
+      - name: Install CocoaPods
+        run: sudo gem install cocoapods
+
+      - name: Install iOS dependencies
+        run: |
+          cd ios
+          pod install
 
       - name: Build IPA (no signing)
         run: flutter build ipa --release --no-codesign
