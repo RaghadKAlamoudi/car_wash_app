@@ -18,9 +18,6 @@ jobs:
         with:
           channel: stable
 
-      - name: Verify Flutter
-        run: flutter --version
-
       - name: Install dependencies
         run: flutter pub get
 
@@ -32,19 +29,31 @@ jobs:
           cd ios
           pod install
 
-      - name: Build IPA (NO SIGNING)
+      # 🔥 STEP 1: Build archive (NOT IPA)
+      - name: Build iOS archive
         run: |
           flutter clean
           flutter pub get
-          flutter build ipa --release --no-codesign
+          flutter build ios --release --no-codesign
 
-      - name: Debug - Show build files
+      # 🔥 STEP 2: Create IPA from archive
+      - name: Export IPA
         run: |
-          echo "Listing build folder..."
-          ls -R build/ios
+          mkdir -p build/ios/ipa
+          xcodebuild -exportArchive \
+            -archivePath build/ios/archive/Runner.xcarchive \
+            -exportPath build/ios/ipa \
+            -exportOptionsPlist ios/ExportOptions.plist
 
-      - name: Upload IPA artifact
+      # 🔍 DEBUG (IMPORTANT)
+      - name: Show IPA files
+        run: |
+          echo "Checking IPA..."
+          find build -name "*.ipa"
+
+      # 📦 Upload
+      - name: Upload IPA
         uses: actions/upload-artifact@v4
         with:
           name: ios-ipa
-          path: build/**/*.ipa
+          path: build/ios/ipa
