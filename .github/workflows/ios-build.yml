@@ -34,7 +34,9 @@ jobs:
 
       - name: Build IPA
         run: |
-          flutter build ipa --release --no-codesign
+          flutter clean
+          flutter pub get
+          flutter build ipa --release
           
       - name: Debug - Show build files
         run: |
@@ -45,4 +47,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ios-ipa
-          path: build/ios/ipa/**/*.ipa
+          path: build/**/*.ipa
