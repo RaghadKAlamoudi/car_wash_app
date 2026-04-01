@@ -35,6 +35,11 @@ jobs:
       - name: Build IPA
         run: |
           flutter build ipa --release --no-codesign
+          
+      - name: Debug - Show build files
+        run: |
+          echo "Listing build folder..."
+          ls -R build/ios
 
       - name: Upload IPA artifact
         uses: actions/upload-artifact@v4
