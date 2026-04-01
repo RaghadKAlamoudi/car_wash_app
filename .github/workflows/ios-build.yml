@@ -32,8 +32,9 @@ jobs:
           cd ios
           pod install
 
-      - name: Build IPA (no signing)
-        run: flutter build ipa --release --no-codesign
+      - name: Build IPA
+        run: |
+          flutter build ipa --release --no-codesign
 
       - name: Upload IPA artifact
         uses: actions/upload-artifact@v4
