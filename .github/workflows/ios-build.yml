@@ -32,12 +32,12 @@ jobs:
           cd ios
           pod install
 
-      - name: Build IPA
+      - name: Build IPA (NO SIGNING)
         run: |
           flutter clean
           flutter pub get
-          flutter build ipa --release
-          
+          flutter build ipa --release --no-codesign
+
       - name: Debug - Show build files
         run: |
           echo "Listing build folder..."
@@ -47,4 +47,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ios-ipa
-          path: build/**/*.ipa
+          path: build/ios/ipa/*.ipa
