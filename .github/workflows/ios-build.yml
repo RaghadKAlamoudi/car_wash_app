@@ -1,4 +1,4 @@
-name: Build iOS IPA
+name: Build & Upload iOS
 
 on:
   push:
@@ -29,31 +29,25 @@ jobs:
           cd ios
           pod install
 
-      # 🔥 STEP 1: Build archive (NOT IPA)
-      - name: Build iOS archive
+      # ✅ BUILD IPA DIRECTLY (CORRECT WAY)
+      - name: Build IPA
         run: |
           flutter clean
           flutter pub get
-          flutter build ios --release --no-codesign
+          flutter build ipa --release
 
-      # 🔥 STEP 2: Create IPA from archive
-      - name: Export IPA
-        run: |
-          mkdir -p build/ios/ipa
-          xcodebuild -exportArchive \
-            -archivePath build/ios/archive/Runner.xcarchive \
-            -exportPath build/ios/ipa \
-            -exportOptionsPlist ios/ExportOptions.plist
-
-      # 🔍 DEBUG (IMPORTANT)
+      # 🔍 DEBUG
       - name: Show IPA files
         run: |
           echo "Checking IPA..."
           find build -name "*.ipa"
 
-      # 📦 Upload
-      - name: Upload IPA
-        uses: actions/upload-artifact@v4
+      # 🚀 UPLOAD TO APPLE (THIS WAS MISSING)
+      - name: Upload to App Store
+        uses: apple-actions/upload-testflight-build@v1
         with:
-          name: ios-ipa
-          path: build/ios/ipa
+          app-path: build/ios/ipa/*.ipa
+          issuer-id: ${{ secrets.APPSTORE_ISSUER_ID }}
+          api-key-id: ${{ secrets.APPSTORE_KEY_ID }}
+          api-private-key: ${{ secrets.APPSTORE_PRIVATE_KEY }}
+
