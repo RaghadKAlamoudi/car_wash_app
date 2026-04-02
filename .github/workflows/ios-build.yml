@@ -24,12 +24,10 @@ jobs:
       - name: Install CocoaPods
         run: sudo gem install cocoapods
 
-      - name: Install iOS dependencies (FIXED)
+      - name: Install iOS dependencies (FINAL FIX)
         run: |
           cd ios
-          pod repo remove trunk || true
-          pod repo add trunk https://github.com/CocoaPods/Specs.git
-          pod install
+          pod install --repo-update
 
       # ✅ BUILD IPA DIRECTLY (CORRECT WAY)
       - name: Build IPA
