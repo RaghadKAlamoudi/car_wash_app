@@ -23,26 +23,18 @@ jobs:
 
       - name: Install CocoaPods
         run: sudo gem install cocoapods
-
-      - name: Install iOS dependencies (FINAL FIX)
+  
+      - name: Install iOS dependencies
         run: |
           cd ios
           pod install --repo-update
-
-      # ✅ BUILD IPA DIRECTLY (CORRECT WAY)
-      - name: Build IPA
+      
+      - name: Build IPA (NO SIGNING)
         run: |
           flutter clean
           flutter pub get
-          flutter build ipa --release
-
-      # 🔍 DEBUG
-      - name: Show IPA files
-        run: |
-          echo "Checking IPA..."
-          find build -name "*.ipa"
-
-      # 🚀 UPLOAD TO APPLE (THIS WAS MISSING)
+          flutter build ipa --release --no-codesign
+      
       - name: Upload to App Store
         uses: apple-actions/upload-testflight-build@v1
         with:
