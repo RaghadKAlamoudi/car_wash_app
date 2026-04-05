@@ -37,7 +37,7 @@ jobs:
       
       - name: Create API Key file
         run: |
-          echo "${{ secrets.APPSTORE_PRIVATE_KEY }}" > AuthKey.p8
+          echo "${{ secrets.APPSTORE_PRIVATE_KEY }}" | sed 's/\\n/\n/g' > AuthKey.p8
       
       - name: Upload to App Store
         uses: apple-actions/upload-testflight-build@v1
