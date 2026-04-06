@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>321253167036-v11dlps3ge3coiqq0bee1cib6n1l4b6s.apps.googleusercontent.com</string>
+	<string>321253167036-718r427jn12rp0vj7hjd5m6ou42i71kj.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.321253167036-v11dlps3ge3coiqq0bee1cib6n1l4b6s</string>
+	<string>com.googleusercontent.apps.321253167036-718r427jn12rp0vj7hjd5m6ou42i71kj</string>
 	<key>ANDROID_CLIENT_ID</key>
 	<string>321253167036-daropv48u8qh3tkcbea8ise9k055oi5k.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
@@ -15,7 +15,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.raghad.carwas</string>
+	<string>com.redsand.carwash</string>
 	<key>PROJECT_ID</key>
 	<string>car-shine-68e43</string>
 	<key>STORAGE_BUCKET</key>
@@ -31,6 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:321253167036:ios:eb3f1d0075bf98a61965b9</string>
+	<string>1:321253167036:ios:30b27c92607dcbd21965b9</string>
 </dict>
 </plist>
