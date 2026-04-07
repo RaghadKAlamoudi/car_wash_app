@@ -23,22 +23,25 @@ jobs:
 
       - name: Install CocoaPods
         run: sudo gem install cocoapods
-  
+
       - name: Install iOS dependencies
         run: |
           cd ios
           pod install --repo-update
-      
-      - name: Build IPA (NO SIGNING)
+
+      # ✅ Build signed IPA (IMPORTANT)
+      - name: Build IPA
         run: |
           flutter clean
           flutter pub get
-          flutter build ipa --release --no-codesign
-      
+          flutter build ipa --release
+
+      # ✅ Create API key file
       - name: Create API Key file
         run: |
           echo "${{ secrets.APPSTORE_PRIVATE_KEY }}" | sed 's/\\n/\n/g' > AuthKey.p8
-      
+
+      # ✅ Upload to TestFlight
       - name: Upload to App Store
         uses: apple-actions/upload-testflight-build@v1
         with:
